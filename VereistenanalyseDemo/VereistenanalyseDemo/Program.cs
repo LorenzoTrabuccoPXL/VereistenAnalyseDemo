@@ -30,7 +30,8 @@
                 if (inputName != name || inputPassword != password)
                     Console.WriteLine("login naam en paswoord komen niet overeen");
             } while ((inputName != name || inputPassword != password) && numberOfTries < 3);
-
+            if (name.Equals(inputName) && password.Equals(inputPassword))
+                Console.WriteLine($"Welkom {name}\nJe bent succesvol ingelogd");
 
 
 
