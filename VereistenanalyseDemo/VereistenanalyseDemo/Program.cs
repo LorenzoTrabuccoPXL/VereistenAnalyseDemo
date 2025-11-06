@@ -5,12 +5,24 @@
         static void Main(string[] args)
         {
             string name;
-            string pasword;
+            string password;
 
-            Console.Write("Naam: ");
-            name = Console.ReadLine();
-            Console.Write("Geef je wachtwoord in: ");
-            pasword = Console.ReadLine();
+            do
+            {
+                Console.Write("Naam: ");
+                name = Console.ReadLine();
+            } while (name.Length >= 12);
+            do
+            {
+                Console.Write("Geef je wachtwoord in: ");
+                password = Console.ReadLine();
+            } while (password.Length >= 12 && char.IsUpper(password[0]) && password.Length < 6);
+
+            
+
+
+
+
         }
     }
 }
